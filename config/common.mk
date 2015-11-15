@@ -128,7 +128,7 @@ PRODUCT_COPY_FILES += \
     vendor/xoplax/prebuilt/common/app/com.grarak.kerneladiutor.apk:system/app/KernelAuditor/KernelAuditor.apk
 
 # Theme engine
-include vendor/cm/config/themes_common.mk
+include vendor/xoplax/config/themes_common.mk
 
 # Required XOS packages
 PRODUCT_PACKAGES += \
