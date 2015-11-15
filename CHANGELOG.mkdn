@@ -6,6 +6,9 @@ Visit https://github.com/XoplaxOS for full source and git access.
 
 CHANGELOG (notable new features)
 ---------
+# XOS 3.0 P1 (codenamed November Rain)
+* Common: Android 6.0
+* Common: Initial Android 6.0 bringup
 
 # XOS 2.1 P3 (codenamed November Rain)
 * Common: Android 5.1.1_r29

@@ -99,6 +99,7 @@ endif
 PRODUCT_COPY_FILES += \
     vendor/xoplax/prebuilt/common/etc/init.local.rc:root/init.xos.rc
 
+<<<<<<< HEAD
 # Bring in camera effects
 PRODUCT_COPY_FILES +=  \
     vendor/xoplax/prebuilt/common/media/LMprec_508.emd:system/media/LMprec_508.emd \
@@ -120,15 +121,15 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/xoplax/config/permissions/com.cyanogenmod.android.xml:system/etc/permissions/com.cyanogenmod.android.xml
 
-# T-Mobile theme engine
-include vendor/xoplax/config/themes_common.mk
-
 # SuperSU
 include vendor/xoplax/config/supersu.mk
 
 # Kernel Auditor
 PRODUCT_COPY_FILES += \
     vendor/xoplax/prebuilt/common/app/com.grarak.kerneladiutor.apk:system/app/KernelAuditor/KernelAuditor.apk
+
+# Theme engine
+include vendor/cm/config/themes_common.mk
 
 # Required XOS packages
 PRODUCT_PACKAGES += \
@@ -138,8 +139,6 @@ PRODUCT_PACKAGES += \
 
 # Optional XOS packages
 PRODUCT_PACKAGES += \
-    VoicePlus \
-    Basic \
     libemoji \
     Terminal
 
@@ -153,7 +152,11 @@ PRODUCT_PACKAGES += \
     LockClock \
     CMHome \
     CMSettingsProvider \
-    Launcher
+    CMUpdater \
+    CMAccount \
+    CyanogenSetupWizard \
+    CMSettingsProvider \
+    ExactCalculator
 
 # CM Platform Library
 PRODUCT_PACKAGES += \
@@ -176,14 +179,19 @@ PRODUCT_PACKAGES += \
     htop \
     powertop \
     lsof \
+    nano \
+    htop \
     mkfs.f2fs \
     fsck.f2fs \
     fibmap.f2fs \
-    ntfsfix \
-    ntfs-3g \
+    mkfs.ntfs \
+    fsck.ntfs \
+    mount.ntfs \
     gdbserver \
     oprofiled \
-    strace
+    sqlite3 \
+    strace \
+    pigz
 
 WITH_EXFAT ?= true
 ifeq ($(WITH_EXFAT),true)
@@ -193,6 +201,7 @@ PRODUCT_PACKAGES += \
     fsck.exfat \
     mkfs.exfat
 endif
+
 
 # SSHD
 PRODUCT_PACKAGES += \
@@ -263,7 +272,7 @@ ifndef CM_PLATFORM_SDK_VERSION
   # the SDK are released.  It should only be incremented when the APIs for
   # the new release are frozen (so that developers don't write apps against
   # intermediate builds).
-  CM_PLATFORM_SDK_VERSION := 3
+  CM_PLATFORM_SDK_VERSION := 4
 endif
 
 ifndef CM_PLATFORM_REV

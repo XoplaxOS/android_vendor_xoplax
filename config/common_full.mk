@@ -8,10 +8,22 @@ include vendor/xoplax/config/xoplax_audio.mk
 PRODUCT_PACKAGES += \
     LiveWallpapers \
     LiveWallpapersPicker \
-    SoundRecorder 
+    MagicSmokeWallpapers \
+    NoiseField \
+    PhaseBeam \
+    PhotoTable \
+    SoundRecorder \
+    PhotoPhase
 
 # Extra tools in XOS
 PRODUCT_PACKAGES += \
+    7z \
+    bash \
+    bzip2 \
+    curl \
+    powertop \
+    unrar \
+    unzip \
     vim \
-    zip \
-    unrar 
+    wget \
+    zip

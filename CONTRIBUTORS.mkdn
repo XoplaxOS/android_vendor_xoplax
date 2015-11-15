@@ -1,5 +1,5 @@
-CyanogenMod
-===========
+Xoplax OS
+=========
 
 Maintainers (XOS 2.1):
 * _armani: Anonim47, AngSanley
