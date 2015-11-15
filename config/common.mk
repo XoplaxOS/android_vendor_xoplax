@@ -99,7 +99,6 @@ endif
 PRODUCT_COPY_FILES += \
     vendor/xoplax/prebuilt/common/etc/init.local.rc:root/init.xos.rc
 
-<<<<<<< HEAD
 # Bring in camera effects
 PRODUCT_COPY_FILES +=  \
     vendor/xoplax/prebuilt/common/media/LMprec_508.emd:system/media/LMprec_508.emd \
